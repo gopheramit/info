@@ -1,0 +1,29 @@
+git init --> initialise local repository
+
+git remote add origin "URL" --> adds remote repository and its URL
+
+git pull origin master --> pulls remote repository from github .
+
+git status --> tell which files are added and are ready to commit.
+
+git add --> lets you add files to your index
+
+git commit --> it refers to a recording snapshot of repository at given time.
+
+git add . --> Adds every file to your index.
+
+git commit -a -m "" -->commit all the files 
+
+git log --> gives log
+
+git branch branch_name -->creartes new branch. 
+
+git checkout branch_name --> switch branch to branch_name.
+
+git merge branch_name --> (be in destination branch ie master) then merge the branch.
+
+git pull=git fetch + git merge
+
+git push origin master --> pushes everything to central repository.
+
+git checkout hex-code filename -->revert back to the changes.

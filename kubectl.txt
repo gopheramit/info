@@ -1,0 +1,28 @@
+kubectl get nodes --> Get all the nodes from the cluster.
+
+kubectl describe resource <resource name> -->Details of particular resource.
+
+kubectl run <container name> --image==<image name> --> Simple way to create depolyment for a pod.
+
+kubectl get <resource name> --> Gets information regarding the resource
+
+pod defination:
+apiVersion:
+kind:pod
+metadata:name,label,annotations
+spec:list of pod container and so on
+status:detail stauts of pod and its container
+
+
+
+kubectl get po --show-labels
+kubectl get po -L creation_method,env
+kubectl label po kubia-manual creation_method=manual
+kubectl label po kubia-manual-v2 env=debug --overwrite --> You need to use --overwrite method while changing existinglabel.
+
+
+
+Replication controller hass three essental part:
+1.label selector :which determines which pods are in scope of replicationcontroller
+2.replica count : which determine desired no of pods that should be running
+3.pod template : which is used while creating new pods.
