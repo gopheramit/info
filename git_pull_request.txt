@@ -1,0 +1,17 @@
+step1: Fork the repository on your on profile.
+
+step2: Clone repository on your machine.
+
+Step 3: make changes.
+
+Step 4:
+
+git ckeckout -b [branch name]
+
+git add
+
+git commit -m "comment"
+
+git push origin [branch name]
+
+step5:create pull request.
