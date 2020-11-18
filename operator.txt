@@ -1,0 +1,41 @@
+1.create a project diretory
+2.operator-sdk init --domain=example.com --repo=github.com/redhat/podset-operator
+    -intialize operator
+
+3.operator-sdk create api --group=app --version=v1alpha1 --kind=PodSet --resource --controller
+    -this command will create boilerplate controller logic & kustomize configuration files.
+    
+    *In Kubernetes, every functional object includes Spec &status.
+    Kubernetes functions by reconciling desired state (Spec) with the 
+    actual cluster state. We then record what is observed (Status). 
+
+4.api/v1alpha1/podset_types.go
+    -modify this file and update Spec& status
+
+5.After modofication run ------> make generate
+    -this will create zz_generated.deepcopy.gofile
+
+6.running-----> make manifests
+    -this will create customized CRD and additional yamls.
+
+7.deploy CRD ----> kubectl apply -f config/crd/bases/app.example.com_podsets.yaml
+
+
+8.confirm CRD ---->kubectl get crd podsets.app.example.com -o yaml
+
+9. controllers/podset_controller.go   
+    -update this file to custmize operator logic
+
+10.running operator ----->make run
+
+
+11.upadate------>config/samples/app_v1alpha1_podset.yaml
+    Ensure your kind: PodSet Custom Resource (CR) is updated with spec.replicas
+
+
+12.Insure namespace???????????
+
+13.Deploy  podser CR toa cluster ------->kubectl create -f config/samples/app_v1alpha1_podset.yaml
+
+
+14.Delete Everything after workis done.
