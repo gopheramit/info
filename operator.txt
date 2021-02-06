@@ -1,16 +1,15 @@
 1.create a project diretory
-2.operator-sdk init --domain=example.com --repo=github.com/redhat/podset-operator
+2.operator-sdk init --domain=example.com --repo=github.com/gopheramit/visitor
     -intialize operator
 
-3.operator-sdk create api --group=app --version=v1alpha1 --kind=PodSet --resource --controller
+3.operator-sdk create api --group=app --version=v1alpha1 --kind=VisitorsApp --resource --controller
     -this command will create boilerplate controller logic & kustomize configuration files.
     
     *In Kubernetes, every functional object includes Spec &status.
     Kubernetes functions by reconciling desired state (Spec) with the 
     actual cluster state. We then record what is observed (Status). 
 
-4.api/v1alpha1/podset_types.go
-    -modify this file and update Spec& status
+4.api/v1alpha1/podset_types.go -modify this file and update Spec& status
 
 5.After modofication run ------> make generate
     -this will create zz_generated.deepcopy.gofile
