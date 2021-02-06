@@ -15,3 +15,11 @@ git commit -m "comment"
 git push origin [branch name]    origin is my forked copy.
 
 step5:create pull request.
+
+
+git remote -v         -> to check all remote repository.
+git remote add upstream URL  -> to add upstream.
+git pull upstream master
+git pull upstream branch_name ->to pull the latest version of code.
+
+git push origin branch_name   ->to push code t the forked copy.
