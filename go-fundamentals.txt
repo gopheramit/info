@@ -1,0 +1,11 @@
+1.Each module in go needs go.mod file ---->go init module_name.
+
+2.Each test in a Go project is a function, but with some special requirements. First, it must be in a file whose
+name ends in _test.go
+
+3.Also, the name of a test function must begin with the word Test
+
+4.in Go; if it doesn’t explicitly fail, that’s considered a pass
+
+5.Red—Green—Refactor-TDD workflow
+red fail test,green make teest wok,Red—Green—Refactor-test driven devlopment.
