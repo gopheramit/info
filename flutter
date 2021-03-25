@@ -1,1 +1,7 @@
 flutter build apk --split-per-abi    ->>>>>>>>apk for devices
+
+
+add sha fingerprint --> keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android 
+
+edit bashrc file -----> nano ~/.bashrc
+
