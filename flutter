@@ -5,3 +5,7 @@ add sha fingerprint --> keytool -list -v -keystore ~/.android/debug.keystore -al
 
 edit bashrc file -----> nano ~/.bashrc
 
+
+firbase authentication issue -https://stackoverflow.com/questions/51925442/firebase-auth-requests-from-this-android-client-application-com-xxx-are-blocked
+
+
