@@ -27,3 +27,6 @@ git pull=git fetch + git merge
 git push origin master --> pushes everything to central repository.
 
 git checkout hex-code filename -->revert back to the changes.
+
+gitignore - Specifies intentionally untracked files to ignore
+echo 'pattern/' >> .gitignore
